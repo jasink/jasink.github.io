@@ -1,92 +1,129 @@
 
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="generator" content="CoffeeCup HTML Editor (www.coffeecup.com)">
-    <meta name="dcterms.created" content="Wed, 27 Nov 2013 12:42:14 GMT">
-    <meta name="description" content="">
-    <meta name="keywords" content="">
-    <title></title>
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>How to create a jQuery slidedown toggle effect div tutorial</title>
+<meta name="description" content="Learn how to create a sliding dropdown effect jQuery div in this easy to follow tutorial" />
+<meta name="keywords" content="jQuery tutorials, Dropdown Div Tutorial, jQuery Toggle Tutorial, Tutorial" />
 
-        <style>
-            body{
-                background-color:#000;
-			 }
-            .content {display:none;}
-            
-             .expander.expanded {
-                padding-left: 13px;
-                background-position: left center;
-                background-repeat: no-repeat;
-                background-image: url(images/expanded.gif);
-                
-            }
-        
-            .expander.collapsed {
-                padding-left: 13px;
-                background-position: left center;
-                background-repeat: no-repeat;
-                background-image: url(images/collapsed.gif);
-           
-			}        
+<link href='http://fonts.googleapis.com/css?family=Patrick+Hand+SC' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:300' rel='stylesheet' type='text/css'>
+<style>
 
+html,body{
+	width:100%;
+	padding:0;
+	margin:0;
+}
 
-             .expander {
-                font-weight:bold;
-                font-size:125%;
-                text-decoration:none;
-				
-            }
-                
-           
-        
-        
-            .holder-frame {
-               background-color: #D0E2F5;
-               border-radius: 2px;
-               box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-               padding: 10px;
-               width: 50%;
-           }
-                       
-        
-        </style>
-  </head>
+.dropdownwrap{
+	height:auto;
+	float:left;
+	margin:0px 0px 20px 0px;
+	background-color:#434343;
+	display:none;
+	padding:20px;
+}
 
-  <body>
+.container{
+	width:100%;
+	float:left;
+}
 
-            
-            <div class="holder-frame">
-                    <a class="expander"  href="#">Click me</a>
-                    <div class="content">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-            
-                        <p>Donec porta porttitor tellus sit amet cursus. Morbi nulla odio,
-                        blandit ac interdum at, consectetur eget purus. Ut cursus rhoncus. <p> 
-            
-                        <p>neque, in rutrum diam congue in. Pellentesque habitant morbi <br/>
-                        tristique senectus et netus et malesuada fames ac turpis egestas.  <br/>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec porta <br/>
-                        porttitor tellus sit amet cursus. Morbi nulla odio, blandit ac <br/>
-                        interdum at, consectetur eget purus. Ut cursus rhoncus neque, in  <br/>
-                        rutrum diam congue in. Pellentesque habitant morbi tristique senectus <br/>
-                        et netus et malesuada fames ac turpis egestas. <p>
-                    </div>
-                
-            </div>
+.container h2{
+	width:100%;
+	float:left;
+	padding:40px 0px;
+	margin:0;
+	text-align:center;
+	font-family: 'Patrick Hand SC', cursive;
+	font-size:36px;
+	color:#434343;
+}
 
+.dropdownwrap h3{
+	width:100%;
+	float:left;
+	padding:40px 0px;
+	margin:0;
+	text-align:center;
+	font-family: 'Patrick Hand SC', cursive;
+	font-size:36px;
+	color:white;
+}
+
+.container p{
+	font-family: 'Open Sans', sans-serif;
+	font-size:10pt;
+	color:#B7B7B7;
+	text-align:center;
+	padding-bottom:50px;
+}
+
+.dropdownwrap p{
+	font-family: 'Open Sans', sans-serif;
+	font-size:10pt;
+	color:white;
+	text-align:center;
+	padding-bottom:50px;
+}
+
+.container a,
+.container a:visited{
+	padding:8px 14px;
+	font-size:12pt;
+	border:1px solid #CCCCCC;
+	background-color:#DDDDDD;
+	text-decoration:none;
+	text-transform:uppercase;
+	color:#424242;
+	border-radius:3px;
+}
+
+.container a:hover{
+	padding:8px 14px;
+	font-size:12pt;
+	border:1px solid #F2F2F2;
+	background-color:white;
+	color:#CCCCCC;
+}
+
+</style>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script>
+
+$(document).ready(function(e) {
+	
+    $('#dropdown').on('click',function(){
+	
+		$('.dropdownwrap').slideToggle();
+		
+	});
+	
+});
+
+</script>
+</head>
+
+<body>
+
+<div class="dropdownwrap">
+
+	<h3>This Is A Dropdown Tutorial Title</h3>
     
-    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
-    <script type="text/javascript" src="simple-expand.js"></script>
-    
-    <script type="text/javascript">
-        $(function () {
-            $('.expander').simpleexpand();
-            
-        });
-    </script>
+    <p>Test</p>
+</div>
 
-  </body>
-  
+<div class="container">
+
+	<h2>How To Create A Toggle jQuery Dropdown Div</h2>
+    
+    <p>Within this tutorial we are going to create a toggle effect slide down div which will open a close on the same button.<br><br>Click the little button below!</p>
+    
+    <p><a id="dropdown" href="#" title="Click This Button">X</a></p>
+
+</div>
+
+</body>
 </html>
