@@ -1,18 +1,80 @@
-<html>
-<head><title>GitHub Test Page</title>
-<style>
-.content {display:none;}
-</style>
-<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
-</head>
-<body>
-<script>
-$('.expander').simpleexpand();
-</script>
-<centre><h1>Test page</h1></centre><br />
-<a class="expander" href="#">click me</a>
-<div class="content">
-    content to hide.
-</div>
-</body>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="generator" content="CoffeeCup HTML Editor (www.coffeecup.com)">
+    <meta name="dcterms.created" content="Wed, 27 Nov 2013 12:42:14 GMT">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <title>Test</title>
+
+        <style>
+            body{
+                background-color:#000;
+			 }
+            .content {display:none;}
+            
+             .expander.expanded {
+                padding-left: 13px;
+                background-position: left center;
+                background-repeat: no-repeat;
+                background-image: url(images/expanded.gif);
+                
+            }
+        
+            .expander.collapsed {
+                padding-left: 13px;
+                background-position: left center;
+                background-repeat: no-repeat;
+                background-image: url(images/collapsed.gif);
+           
+			}        
+
+
+             .expander {
+                font-weight:bold;
+                font-size:125%;
+                text-decoration:none;
+				
+            }
+                
+           
+        
+        
+            .holder-frame {
+               background-color: #D0E2F5;
+               border-radius: 2px;
+               box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+               padding: 10px;
+               width: 50%;
+           }
+                       
+        
+        </style>
+  </head>
+
+  <body>
+
+            
+            <div class="holder-frame">
+                    <a class="expander"  href="#">Click me</a>
+                    <div class="content">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    </div>
+                
+            </div>
+
+    
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    <script type="text/javascript" src="simple-expand.js"></script>
+    
+    <script type="text/javascript">
+        $(function () {
+            $('.expander').simpleexpand();
+            
+        });
+    </script>
+
+  </body>
+  
 </html>
