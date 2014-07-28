@@ -1,6 +1,17 @@
 <html>
-<head><title>Test Page</title></head>
+<head><title>Test Page</title>
+<style>
+.content {display:none;}
+</style>
+<script>
+$('.expander').simpleexpand();
+</script>
+</head>
 <body>
-<centre><h1>Test page</h1></centre>
+<centre><h1>Test page</h1></centre><br />
+<a class="expander" href="#">click me</a>
+<div class="content">
+    content to hide.
+</div>
 </body>
 </html>
